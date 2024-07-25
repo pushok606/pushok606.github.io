@@ -1,0 +1,197 @@
+/* Основные стили для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Это поможет избежать проблем с размером элементов */
+}
+
+/* Стили для заголовка */
+header {
+    background-color: #333; /* Темный фон */
+    color: #fff; /* Белый текст */
+    padding: 10px 0;
+    text-align: center; /* Центрирование текста */
+}
+
+/* Стили для навигационного меню */
+nav {
+    background-color: #444; /* Чуть светлее фон */
+}
+
+nav ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Используем flex для расположения элементов в строку */
+    justify-content: center; /* Центрируем элементы */
+}
+
+nav ul li {
+    margin: 0 10px; /* Промежуток между элементами меню */
+}
+
+nav ul li a {
+    color: #fff; /* Белый цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    padding: 10px 20px;
+    display: block; /* Блочный элемент */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Темнее фон при наведении */
+}
+
+/* Стили для основного контента */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Стили для галереи изображений */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap; /* Изображения будут переноситься на новую строку при необходимости */
+    gap: 10px; /* Промежутки между изображениями */
+}
+
+.gallery-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd; /* Серая рамка */
+    border-radius: 5px; /* Скругленные углы */
+}
+
+/* Стили для новостей */
+article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+/* Стили для FAQ */
+dl {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 10px 0;
+}
+
+/* Стили для отзывов */
+blockquote {
+    border-left: 5px solid #ccc;
+    margin: 0;
+    padding-left: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Стили для команды */
+.team-member {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Дополнительные стили для новых секций */
+section ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+section ul li {
+    padding: 5px 0;
+}
+
+section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+section ul li a:hover {
+    text-decoration: underline;
+}
+
+section p {
+    margin: 10px 0;
+}
+
+/* Стили для магазина */
+#shop ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#shop ul li {
+    flex: 1 1 calc(33.333% - 20px); /* Три колонки */
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#shop ul li a {
+    display: block;
+    color: #444;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Стили для событий */
+#events ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#events ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#events ul li:last-child {
+    border-bottom: none;
+}
