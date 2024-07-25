@@ -5,10 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Sword Art</title>
     <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей CSS -->
+    <style>
+        /* Простейшие стили для модальных окон и галереи, можно поместить в файл styles.css */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .gallery-container img {
+            width: 100px;
+            height: auto;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Cat Sword Art</h1>
+        <div id="user-info"></div>
+        <button id="loginBtn">Login</button>
+        <button id="registerBtn">Register</button>
+        <button id="logoutBtn">Logout</button> <!-- Кнопка для выхода -->
     </header>
     <nav>
         <ul>
@@ -85,12 +133,12 @@
                 <p>"cringe😑👎"</p>
                 <cite>- Enthusiastic Participant</cite>
             </blockquote>
-
+        </section>
         <section id="events">
             <h2>Former events</h2>
             <ul>
                 <li>Cat Sword Championship - August 5, 2024</li>
-		<h4>Winner: Nothing, 2024</h4>
+                <h4>Winner: Nothing, 2024</h4>
             </ul>
         </section>
         <section id="shop">
@@ -125,6 +173,34 @@
     <footer>
         <p>&copy; 2024 Cat Sword Art. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script> <!-- Подключение файла скриптов JavaScript -->
+
+    <!-- Модальные окна -->
+    <!-- Логин -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span id="closeLogin" class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Регистрация -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span id="closeRegister" class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" name="username" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Подключение файла скриптов JavaScript -->
 </body>
 </html>
